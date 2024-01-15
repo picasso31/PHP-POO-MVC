@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    /* border: 1px solid red; */
+
+
+}
+
+
+
+
+/* nav{
+        border: 2px solid black;
+       
+        
+}
+li{
+    /* border: 2px solid black; */
+    /* display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;; */
+ /* }  */
+/* .deroulant:hover{
+    background-color: #010101;
+    color: rgb(218, 206, 206);
+    cursor: pointer
+    
+}  */
