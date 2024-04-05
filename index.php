@@ -4,8 +4,8 @@ require_once('Models/Model.php');
 require_once('Controllers/Controller.php');
 require_once('Utils/header.php');
 
-$controllers=['home','livres','fournisseurs','commandes'];
-$controller_default='home';
+$controllers=['home','livres','fournisseurs','commandes','connexion',];
+$controller_default='connexion';
 
 if(isset($_GET['controller']) and in_array($_GET['controller'],$controllers))
 {
@@ -28,4 +28,10 @@ else
 
 require_once('Utils/footer.php');
 
+
+function redirectToUrl(string $url): never
+{
+    header("Location: {$url}");
+    exit();
+}
 ?>

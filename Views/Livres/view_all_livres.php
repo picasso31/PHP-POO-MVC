@@ -1,7 +1,7 @@
 <div>
     
 <table id='table' style="border:3px solid black">
-    <thead style ="background-color:gray;">
+    <thead style ="background-color:#85C1E9;">
        <th style="border:3px solid black"> <strong> &nbsp; ISBN&nbsp;</strong></th> 
         <strog><th style="border:3px solid black">  <strong> &nbsp; Titre&nbsp; <strong> </th>
         <strog><th style="border:3px solid black"> <strong> &nbsp;Theme&nbsp; <strong></th>
@@ -11,7 +11,7 @@
         <strog><th style="border:3px solid black"> <strong> &nbsp; Prénom&nbsp; <strong></th>
         <strog><th style="border:3px solid black">  <strong>&nbsp;Éditeur&nbsp;<strong></th>
         <strog><th style="border:3px solid black"> <strong>&nbsp; Année d'édition&nbsp; <strong></th>
-        <strog><th style="border:3px solid black"><strong> &nbsp;Prix &nbsp; <strong></th>
+        <strog><th style="border:3px solid black"><strong> &nbsp;Prix &nbsp; €&nbsp; <strong></th>
         <strog><th style="border:3px solid black"> <strong>&nbsp;Langue &nbsp;<strong></th>
         
     </thead>
@@ -27,7 +27,7 @@
         <td style="border:3px solid black">&nbsp;<?=$l->Prenom_auteur?>&nbsp;</td>
         <td style="border:3px solid black">&nbsp;<?=$l->Editeur?>&nbsp;</td>
         <td style="border:3px solid black">&nbsp;<?=$l->Annee_edition?>&nbsp;</td>
-        <td style="border:3px solid black">&nbsp;<?=$l->Prix_vente?>&nbsp;</td>
+        <td style="border:3px solid black">&nbsp;<?=$l->Prix_vente?>&nbsp;€&nbsp;</td>
         <td style="border:3px solid black">&nbsp;<?=$l->Langue_livre?>&nbsp;</td>
        
     </tr>

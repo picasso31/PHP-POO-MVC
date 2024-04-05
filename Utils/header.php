@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./Content/css/style.css">
     <script src="./Content/js/script.js"></script>
-    <title>Salam</title>
+    <title>mvc2222</title>
 </head>
 <body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -18,7 +18,7 @@
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="?controller=livres&action=action_home">Accueil</a>
+  <a class="navbar-brand" href="?controller=home&action=home">Accueil</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -34,7 +34,7 @@
      
       
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="?controller=livres&action=all_livres" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          livres
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -68,14 +68,14 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="?controller=commandes&action=all_commandes">Toutes les commandes</a>
-          <a class="dropdown-item" href="?controller=commandes&action=par_editeur">par editeur</a>
-          <a class="dropdown-item" href="?controller=fournisseurs&action=all_fournisseurs">par fournisseur</a>
+          <a class="dropdown-item" href="?controller=commandes&action=editeur_commandes">par editeur</a>
+          <a class="dropdown-item" href="?controller=commandes&action=fournisseur_commandes">par fournisseur</a>
           <a class="dropdown-item" href="?controller=commandes&action=date_achat">par date </a>
           <div class="dropdown-divider"></div>      
         </div>
       </li>
 <li>
-<a class="navbar-brand" href="?controller=home&action=connexion">connexion</a>
+<a class="navbar-brand" href="?controller=home&action=login">connexion</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

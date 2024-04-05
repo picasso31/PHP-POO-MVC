@@ -16,9 +16,11 @@ abstract class Controller		//Ceci est le controleur par defaut
 
 	protected function render($vue,$data=[])		//Fonction qui recupere les données et les transmet a la vu
 	{
-		extract($data);								//Recupération des données à afficher
+		extract($data);								//Recupération des données à afficher et les transformer en variables
 
-		$file_name="Views/view_".$vue.'.php';
+		$controller_actif = $_GET['controller'];
+
+		$file_name="Views/".$controller_actif."/view_".$vue.'.php';
 		if(file_exists($file_name))
 		{											//Si le fichier existe
 			require($file_name);					//Si oui on l'affiche
@@ -35,4 +37,14 @@ abstract class Controller		//Ceci est le controleur par defaut
 		$this->render('error',$data);
 		die();										//Pour faire terminer le script vu qu'il y a une erreur
 	}
+
+
+
+	function redirectToUrl(string $url): never
+	{
+		header("Location: {$url}");
+		exit();
+	}
+	
 }
+

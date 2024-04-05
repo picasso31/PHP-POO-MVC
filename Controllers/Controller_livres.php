@@ -29,7 +29,7 @@ class Controller_livres extends Controller
         $this->render("par_titre",$data);
 
     }
-    // -----------------------------------------------------action boutton par titre -----------------------------------------------------//
+    // -----------------------------------------------------action boutton par titre_resultat -----------------------------------------------------//
     public function action_par_titre_resultat()
     {
         $m=Model::get_model();
@@ -38,7 +38,7 @@ class Controller_livres extends Controller
 
     }
 
-
+// -----------------------------------------------------action par auteur -----------------------------------------------------//
 
     public function action_par_auteur()
     {
@@ -48,6 +48,20 @@ class Controller_livres extends Controller
 
     }
 
+    
+// -----------------------------------------------------action boutton par auteur resultat -----------------------------------------------------//
+// boutton dans livres/auteur/
+    public function action_par_auteur_resultat()
+    {
+        $m=Model::get_model();
+        $data=['livres'=>$m->get_par_auteur_resultat()];
+        $this->render("par_auteur_resultat",$data);
+
+    }
+
+
+    // -----------------------------------------------------action boutton par editeur -----------------------------------------------------//
+
     public function action_par_editeur()
     {
         $m=Model::get_model();
@@ -56,7 +70,14 @@ class Controller_livres extends Controller
 
     }
 
+    // -----------------------------------------------------action boutton par_editeur_resultat -----------------------------------------------------//
 
-    
+    public function action_par_editeur_resultat()
+    {
+        $m=Model::get_model();
+        $data=['livres'=>$m->get_par_editeur_resultat()];
+        $this->render("par_editeur_resultat",$data);
+
+    }
 
 }

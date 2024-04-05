@@ -1,4 +1,5 @@
-<div>
+<form action="?controller=commandes&action=editeur_commandes" method="post">
+ 
     <p> <?= isset($search)?'Recherche par '.$search:'' ?></p>
 <table id='table' style="border:3px solid black" style ="background-color:#85C1E9;"  >
     <thead style ="background-color:#85C1E9;" >
@@ -8,7 +9,6 @@
         <th style="border:3px solid black">&nbsp;Date achat&nbsp;</th>
         <th style="border:3px solid black">&nbsp;Prix achat&nbsp;€&nbsp;</th>
         <th style="border:3px solid black">&nbsp;nombre d'exemplaires&nbsp;</th>
-        <!-- <th style="border:3px solid black">&nbsp;code fournisseur&nbsp;</th> -->
         
         
     </thead>
@@ -20,11 +20,13 @@
         <td  style="border:3px solid black" >&nbsp;&nbsp;<?=$c->Date_achat?>&nbsp;</td>
         <td  style="border:3px solid black" >&nbsp;&nbsp;<?=$c->Prix_achat?>&nbsp;€&nbsp;</td>
         <td  style="border:3px solid black" >&nbsp;&nbsp;<?=$c->Nbr_exemplaires?>&nbsp;</td>
-        <!-- <td  style="border:3px solid black" >&nbsp;&nbsp;<?=$c->Code_fournisseur?>&nbsp;</td> -->
         
        
     </tr>
     <?php endforeach; ?>
 </table>
-</div>            
+             
               
+</form>
+
+

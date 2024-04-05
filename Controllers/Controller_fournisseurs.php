@@ -19,8 +19,8 @@ class Controller_fournisseurs extends Controller
         $this->render("all_fournisseurs",$data);
 
     }
-
-    // -----------------raison social----------------------------//
+    
+    // -----------------raison sociale----------------------------//
     public function action_raison_sociale()
     {
         $m=Model::get_model();
@@ -28,7 +28,17 @@ class Controller_fournisseurs extends Controller
         $this->render("raison_sociale",$data);
 
     }
-      // -----------------localié----------------------------//
+
+// ----------------- fournisseurs /raison social-boutton resultat----------------------------//
+public function action_raison_sociale_resultat()
+{
+    $m=Model::get_model();
+    $data=['fournisseurs'=>$m->get_raison_sociale_resultat()];
+    $this->render("raison_sociale_resultat",$data);
+
+}
+
+      // -----------------localité----------------------------//
 
     public function action_localite()
     {
@@ -37,6 +47,15 @@ class Controller_fournisseurs extends Controller
         $this->render("localite",$data);
 
     }
+ // ----------------- localite / boutton localité resultat ----------------------------//
+    public function action_par_localite_resultat()
+    {
+        $m=Model::get_model();
+        $data=['fournisseurs'=>$m->get_par_localite_resultat()];
+        $this->render("par_localite_resultat",$data);
+
+    }
+
      // -----------------pays----------------------------//
 
      public function action_pays()
@@ -46,7 +65,18 @@ class Controller_fournisseurs extends Controller
          $this->render("pays",$data);
  
      }
+// -----------------pays_resultat----------------------------//
 
-   
+public function action_pays_resultat()
+{
+    $m=Model::get_model();
+    $data=['fournisseurs'=>$m->get_pays_resultat()];
+    $this->render("pays_resultat",$data);
+
+}
+
+
+
+
 
 }

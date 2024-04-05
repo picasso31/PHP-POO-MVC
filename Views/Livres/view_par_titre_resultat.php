@@ -1,7 +1,4 @@
-<div>
-
-
-
+<form action="?controller=livres&action=par_titre" method="post">
     
 <table id='table' style="border:3px solid black">
     <thead style ="background-color:gray;">
@@ -34,7 +31,13 @@
         <td style="border:3px solid black">&nbsp;<?=$l->Langue_livre?>&nbsp;</td>
        
     </tr>
+    
     <?php endforeach; ?>
+    <br>
 </table>
+<br>
+ 
+<input class="styled" type="submit" value="retour" />
+</form>
 </div>            
               
