@@ -341,18 +341,18 @@ public function get_par_localite_resultat()
 }
     // -------------------------------PARTIE connexion --------------------------------------------//
 
-    public function get_connexion()
-    {
-    //  $choixFournisseurCommande=$_POST[' '];
-        try {
-         // echo ("<br> c'est commandes fournisseurs resultat<br>");
-            $requete = $this->bd->prepare('SELECT * FROM commandes JOIN fournisseurs ON fournisseurs.Id_fournisseur = commandes.id_commande WHERE Code_fournisseur  =:c');
-            $requete->execute(array(':c'=>$choixFournisseurCommande));
-        } catch (PDOException $e) {
-            die('Erreur [' . $e->getCode() . '] : ' . $e->getMessage() . '</p>');
-        }
-        return $requete->fetchAll(PDO::FETCH_OBJ);
-    }
+    // public function get_connexion()
+    // {
+    // //  $choixFournisseurCommande=$_POST[' '];
+    //     try {
+    //      // echo ("<br> c'est commandes fournisseurs resultat<br>");
+    //         $requete = $this->bd->prepare('SELECT * FROM commandes JOIN fournisseurs ON fournisseurs.Id_fournisseur = commandes.id_commande WHERE Code_fournisseur  =:c');
+    //         $requete->execute(array(':c'=>$choixFournisseurCommande));
+    //     } catch (PDOException $e) {
+    //         die('Erreur [' . $e->getCode() . '] : ' . $e->getMessage() . '</p>');
+    //     }
+    //     return $requete->fetchAll(PDO::FETCH_OBJ);
+    // }
 
 
     
